@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Lambda Shop</title>
+	<link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:700|Lato|Open+Sans:400,400i,700|Yeseva+One" rel="stylesheet"> 
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<header class="main-header">
-		<a class="header-logo"><img src="" alt=""></a>
+		<a class="header-logo"><img src="logo.png" alt=""></a><!--Наложить шум на лого-->
 		<nav class="header-nav">
 			<ul class="header-menu-list">
 				<li class="menu-item"><a href="#">Home</a></li>
@@ -23,28 +26,30 @@
 			</ul>
 		</nav>
 		<h2 class="header-title">the right ingredients for the right food</h2>
-		<a href="#" class="button">Book a table</a>
-		<a href="#" class="button">See the menu</a>
+		<a href="#" class="button button-table">Book a table</a>
+		<a href="#" class="button button-menu">See the menu</a>
 	</header>
-	<main>
+	<main class="index-main">
 		<h1 class="visually-hidden">Lambda</h1>
 		<section class="preview">
 			<h2 class="preview-title">Just the right food</h2>
 			<p class="preview-description">
 				If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!
 			</p>
-			<img src="#" alt="">
+			<img src="img/dish.png" alt="">
 		</section>
 		<section class="promo-ingridients">
-			<h2 class="ingridients-title">Fine ingredients</h2>
+			<div class="ingridients-wrapper"><!--Примесь "Покоцености" к обёртке-->
+				<h2 class="ingridients-title">Fine ingredients</h2>
 			<p class="ingridients-description">
 				If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!
 			</p>
 			<ul class="ingridients-img-list">
-				<li class="ingridients-img-item"><img src="" alt=""></li>
-				<li class="ingridients-img-item"><img src="" alt=""></li>
-				<li class="ingridients-img-item"><img src="" alt=""></li>
+				<li class="ingridients-img-item"><img src="img/img-3.jpg" alt=""></li>
+				<li class="ingridients-img-item"><img src="img/img-2.jpg" alt=""></li>
+				<li class="ingridients-img-item"><img src="img/img.jpg" alt=""></li>
 			</ul>
+			</div>
 		</section>
 		<section class="menu-eat">
 			<h2 class="visually-hidden">Menu</h2>
@@ -146,25 +151,28 @@
 			</table>
 		</section>
 		<section class="review">
-			<h2 class="reviews-title">Guest Reviews</h2>
-			<p class="reviews-description">
-				If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!
-			</p>
-			<span class="reviews-copyright">- food inc, New York</span>
+			<div class="review-wrapper">
+				<h2 class="reviews-title">Guest Reviews</h2>
+				<p class="reviews-description">
+					If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!
+				</p>
+				<span class="reviews-copyright">- food inc, New York</span>
+			</div>
 		</section>
 		<section class="booking">
 			<h2 class="booking-title">Just the right food</h2>
 			<div class="img-wrapper">
-				<img src="" alt="">
-				<img src="" alt="">
+				<img src="img/image4.jpg" alt="">
+				<img src="" alt="img/image5.jpg">
 			</div>
-			<div class="booking-description"></div>
-			<p>
-				If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food.
-			</p>
-			<p>
-				Delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out! Perfect materials and freshly baked food.
-			</p>
+			<div class="booking-description">
+				<p>
+					If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food.
+				</p>
+				<p>
+					Delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out! Perfect materials and freshly baked food.
+				</p>
+			</div>
 			<form class="booking-form" action="post">
 				<label for="booking-form-name">Name</label>
 				<input type="text" id="booking-form-name">
@@ -174,7 +182,7 @@
 				<input type="date" id="booking-form-date">
 				<label for="booking-form-number">Party Number</label>
 				<input type="number" id="booking-form-number" min="1" max="30" step="1">
-				<button class="button" type="submit">Book now!</button>
+				<button class="form-button" type="submit">Book now!</button>
 			</form>
 		</section>
 	</main>
@@ -187,19 +195,19 @@
 		</section>
 		<section class="time">
 			<h2 class="time-title">Opening Hours</h2>
-			<p><span>Mon-Thu: </span><span>7:00am-8:00pm </span></p>
-			<p><span>Fri-Sun: </span><span>7:00am-10:00pm</span></p>
+			<p><span class="time-month">Mon-Thu: </span><span>7:00am-8:00pm </span></p>
+			<p><span class="time-month">Fri-Sun: </span><span>7:00am-10:00pm</span></p>
 			<ul class="card-list">
-				<li class="card-item"></li>
-				<li class="card-item"></li>
-				<li class="card-item"></li>
-				<li class="card-item"></li>
+				<li class="card-item"><a href="#"></a></li>
+				<li class="card-item"><a href="#"></a></li>
+				<li class="card-item"><a href="#"></a></li>
+				<li class="card-item"><a href="#"></a></li>
 			</ul>
 		</section>
 		<section class="location">
 			<h2 class="location-title">Our Location</h2>
 			<address>
-				19th Paradise Street Sitia
+				19th Paradise Street Sitia<br>
 				128 Meserole Avenue
 			</address>
 			<ul class="footer-social-list">

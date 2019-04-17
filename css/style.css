@@ -1,0 +1,243 @@
+body {
+	margin: 0;
+	padding: 0;
+
+	font-family: "Lato", "Arial", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	color: #4c4c4c;
+
+	background-color: #f9fbfb;
+}
+a {
+	text-decoration: none;
+}
+.button {
+	font-family: "Lato", "Arial", sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: normal;
+	
+	text-align: center;
+	color: #ffffff;
+	vertical-align: middle;
+	text-transform: uppercase;
+
+	border: none;
+}
+.main-header {
+	background-color: #ccaf4d;
+	background-image: url("../img/bg-0.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.header-menu-list,
+.header-social-list {
+	list-style: none;
+}
+.header-menu-item a {
+	font-family: "Gentium Book Basic", "Georgia", serif;
+	font-size: 21px;
+	font-weight: 700;
+	line-height: normal;
+	color: #ffffff;
+}
+.header-social-item a {
+	background-image: url("../img/social.png");
+}
+.header-social-item a:first-child {
+	background-position: 0 0;
+}
+.header-social-item a:nth-child(2) {
+	background-position: 10px 0;
+}
+.header-social-item a:last-child {
+	background-position: 20px 0;
+}
+.header-title {
+	font-family: "YesevaOne", "Georgia", serif;
+	font-size: 90px;
+	font-weight: 400;
+	line-height: normal;
+	color: #ffffff;
+	text-align: center;
+}
+.button-table {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+.button-menu {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+.index-main h2 {
+	font-family: "YesevaOne", "Georgia", serif;
+	font-size: 36px;
+	font-weight: 400;
+	line-height: 24px;
+	color: #cc9900;
+
+	text-align: center;
+}
+.preview {
+	background-image: url("../img/pattern.png");
+	background-repeat: no-repeat;
+}
+.preview-description {
+	text-align: center;
+}
+.promo-ingridients {
+	background-color: url("../img/bg.jpg");
+}
+.ingridients-wrapper {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+.ingridients-wrapper .ingridients-title {
+	color: #ffffff;
+}
+.ingridients-description {
+	color: #ffffff;
+}
+.menu-eat {
+	background-image: url("../img/pattern2.png");
+}
+.menu-eat caption {
+	font-family: "YesevaOne", "Georgia", serif;
+	font-size: 36px;
+	font-weight: 400;
+	line-height: 36px;
+	color: #cc9900;
+	text-align: center;
+}
+.info-name {
+	font-family: "YesevaOne", "Georgia", serif;
+	font-size: 21px;
+	font-weight: 400;
+	line-height: 24px;
+	color: #c89f2d;
+}
+.info-price {
+	font-family: "YesevaOne", "Georgia", serif;
+	font-size: 21px;
+	font-weight: 400;
+	line-height: 24px;
+	color: #c89f2d;
+}
+.item-description {
+	font-size: 16px;
+	line-height: 24px;
+	color: #4c4c4c;
+}
+.review {
+	background-image: url("../img/bg-2.jpg");
+}
+.review-wrapper {
+	font-family: "YesevaOne", "Georgia", serif;
+	font-weight: 400;
+	line-height: normal;
+	color: #ffffff;
+	text-align: center;
+
+	background-color: rgba(0, 0, 0, 0.2);
+}
+.reviews-title {
+	font-size: 36px;
+}
+.reviews-description {
+	font-size: 25px;
+	line-height: 45px;
+}
+.reviews-copyright {
+	font-family: "Lato", "Arial", sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 45px;
+}
+.booking {
+	background-image: url("../img/pattern.png");
+	background-repeat: no-repeat;
+}
+.booking-description {
+	text-align: center;
+}
+.booking-form label{
+	font-family: "Open Sans", "Arial", sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: normal;
+	color: #c9a131;
+}
+.booking-form input::placeholder {
+	font-family: "Open Sans", "Arial", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	font-style: italic;
+	line-height: normal;
+	color: #7c7c7c;
+}
+.form-button {
+	font-family: "Open Sans", "Arial", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: normal;
+	color: #ffffff;
+	text-align: center;
+
+	background-color: #c9a131;
+}
+.main-footer {
+	background-color: #191919;
+}
+.main-footer h2 {
+	font-family: "YesevaOne", "Georgia", serif;
+	font-size: 21px;
+	font-weight: 400;
+	line-height: 24px;
+	color: #ffffff;
+	text-align: center;
+}
+.card-list,
+.footer-social-list {
+	list-style: none;
+}
+.about-description span {
+	font-weight: bold;
+}
+.time-month {
+	font-weight: bold;
+}
+.card-item a {
+	background-image: url("../img/cards.png");
+}
+.card-item a:first-child {
+	background-position: 0 0;
+}
+.card-item a:nth-child(2) {
+	background-position: 10px 0;
+}
+.card-item a:nth-child(3) {
+	background-position: 20px 0;
+}
+.card-item a:nth-child(4) {
+	background-position: 30px 0;
+}
+.card-item a:last-child {
+	background-position: 40px 0;
+}
+.location address {
+	font-weight: 700;
+}
+.footer-social-item a {
+	background-image: url("../img/icons.png");
+}
+.footer-social-item a:first-child {
+	background-position: 0 0;
+}
+.footer-social-item a:nth-child(2) {
+	background-position: 10px 0;
+}
+.footer-social-item a:nth-child(3) {
+	background-position: 20px 0;
+}
+.footer-social-item a:last-child {
+	background-position: 30px 0;
+}
