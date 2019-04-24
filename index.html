@@ -8,9 +8,9 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<header class="main-header">
-		<a class="header-logo"><img src="logo.png" alt=""></a><!--Наложить шум на лого-->
+	<header class="main-header container">
 		<nav class="header-nav">
+			<a class="header-logo"><img src="img/logo.png" width="156" height="92" alt="Lambda-logo"></a><!--Наложить шум на лого-->
 			<ul class="header-menu-list">
 				<li class="menu-item"><a href="#">Home</a></li>
 				<li class="menu-item"><a href="#">About</a></li>
@@ -26,17 +26,21 @@
 			</ul>
 		</nav>
 		<h2 class="header-title">the right ingredients for the right food</h2>
-		<a href="#" class="button button-table">Book a table</a>
-		<a href="#" class="button button-menu">See the menu</a>
+		<div class="wrapper-button">
+			<a href="#" class="button button-table">Book a table</a>
+			<a href="#" class="button button-menu">See the menu</a>
+		</div>
 	</header>
-	<main class="index-main">
+	<main class="index-main container">
 		<h1 class="visually-hidden">Lambda</h1>
 		<section class="preview">
-			<h2 class="preview-title">Just the right food</h2>
-			<p class="preview-description">
-				If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!
-			</p>
-			<img src="img/dish.png" alt="">
+			<div class="preview-wrapper">
+				<h2 class="preview-title">Just the right food</h2>
+				<p class="preview-description">
+					If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!
+				</p>
+			</div>	
+			<img src="img/dish.png" width="621" height="625" alt="dish of food">
 		</section>
 		<section class="promo-ingridients">
 			<div class="ingridients-wrapper"><!--Примесь "Покоцености" к обёртке-->
@@ -45,110 +49,114 @@
 				If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!
 			</p>
 			<ul class="ingridients-img-list">
-				<li class="ingridients-img-item"><img src="img/img-3.jpg" alt=""></li>
-				<li class="ingridients-img-item"><img src="img/img-2.jpg" alt=""></li>
-				<li class="ingridients-img-item"><img src="img/img.jpg" alt=""></li>
+				<li class="ingridients-img-item"><img src="img/image-3.jpg" alt=""></li>
+				<li class="ingridients-img-item"><img src="img/image-2.jpg" alt=""></li>
+				<li class="ingridients-img-item"><img src="img/image.jpg" alt=""></li>
 			</ul>
 			</div>
 		</section>
 		<section class="menu-eat">
 			<h2 class="visually-hidden">Menu</h2>
-			<table class="table-appetisers">
-				<caption>Appetisers</caption>
-				<tr class="item-info">
-					<td class="info-name">Tzatsiki</td>
-					<td class="info-price">$3.99</td>
-				</tr>
-				<tr class="item-description">
-					<td>Refreshing traditional cucumber and garlic yoghurt dip.</td>
-				</tr>
-				<tr class="item-info">
-					<td class="info-name">Aubergine Salad</td>
-					<td class="info-price">$5.50</td>
-				</tr>
-				<tr class="item-description">
-					<td>Pureed eggplant, garlic, green pepper and tomato dip.</td>
-				</tr>
-				<tr class="item-info">
-					<td class="info-name">Aubergine Salad</td>
-					<td class="info-price">$5.25</td>
-				</tr>
-				<tr class="item-description">
-					<td>Pureed eggplant, garlic, green pepper and tomato dip.</td>
-				</tr>
-			</table>
-			<table class="table-salads">
-				<caption>Salads</caption>
-				<tr class="item-info">
-					<td class="info-name">Olive_Special</td>
-					<td class="info-price">$5.99</td>
-				</tr>
-				<tr class="item-description">
-					<td>Refreshing traditional cucumber and garlic yoghurt dip.</td>
-				</tr>
-				<tr class="item-info">
-					<td class="info-name">Greek_Salad</td>
-					<td class="info-price">$5.50</td>
-				</tr>
-				<tr class="item-description">
-					<td>.Pureed eggplant, garlic, green pepper and tomato dip.</td>
-				</tr>
-				<tr class="item-info">
-					<td class="info-name">Gusto_Salad</td>
-					<td class="info-price">$5.25</td>
-				</tr>
-				<tr class="item-description">
-					<td>Pureed eggplant, garlic, green pepper and tomato dip.</td>
-				</tr>
-			</table>
-			<table class="table-starters">
-				<caption>Starters</caption>
-				<tr class="item-info">
-					<td class="info-name">Haloumi</td>
-					<td class="info-price">$3.99</td>
-				</tr>
-				<tr class="item-description">
-					<td>Refreshing traditional cucumber and garlic yoghurt dip.</td>
-				</tr>
-				<tr class="item-info">
-					<td class="info-name">Spinach_Pie</td>
-					<td class="info-price">$5.50</td>
-				</tr>
-				<tr class="item-description">
-					<td>.Pureed eggplant, garlic, green pepper and tomato dip.</td>
-				</tr>
-			</table>
-			<table class="table-dishes">
-				<caption>Main Dishes</caption>
-				<tr class="item-info">
-					<td class="info-name">Cornish_Mackerel</td>
-					<td class="info-price">$5.99</td>
-				</tr>
-				<tr class="item-description">
-					<td>Refreshing traditional cucumber and garlic yoghurt dip.</td>
-				</tr>
-				<tr class="item-info">
-					<td class="info-name">Roast_Lamb</td>
-					<td class="info-price">$5.50</td>
-				</tr>
-				<tr class="item-description">
-					<td>.Pureed eggplant, garlic, green pepper and tomato dip.</td>
-				</tr>
-				<tr class="item-info">
-					<td class="info-name">Fried_Chicken</td>
-					<td class="info-price">$5.25</td>
-				</tr>
-				<tr class="item-description">
-					<td>Pureed eggplant, garlic, green pepper and tomato dip.</td>
-				</tr>
-				<tr class="item-info">
-					<td class="info-name">Pastitsio</td>
-					<td class="info-price">$5.99</td>
-				</tr>
-				<tr class="item-description">
-					<td>Refreshing traditional cucumber and garlic yoghurt dip.</td>
-				</tr>
-			</table>
+			<div class="first-column">
+				<table class="table-appetisers">
+					<caption>Appetisers</caption>
+					<tr class="item-info">
+						<td class="info-name">Tzatsiki</td>
+						<td class="info-price">$3.99</td>
+					</tr>
+					<tr class="item-description">
+						<td>Refreshing traditional cucumber and garlic yoghurt dip.</td>
+					</tr>
+					<tr class="item-info">
+						<td class="info-name">Aubergine Salad</td>
+						<td class="info-price">$5.50</td>
+					</tr>
+					<tr class="item-description">
+						<td>Pureed eggplant, garlic, green pepper and tomato dip.</td>
+					</tr>
+					<tr class="item-info">
+						<td class="info-name">Aubergine Salad</td>
+						<td class="info-price">$5.25</td>
+					</tr>
+					<tr class="item-description">
+						<td>Pureed eggplant, garlic, green pepper and tomato dip.</td>
+					</tr>
+				</table>
+				<table class="table-salads">
+					<caption>Salads</caption>
+					<tr class="item-info">
+						<td class="info-name">Olive_Special</td>
+						<td class="info-price">$5.99</td>
+					</tr>
+					<tr class="item-description">
+						<td>Refreshing traditional cucumber and garlic yoghurt dip.</td>
+					</tr>
+					<tr class="item-info">
+						<td class="info-name">Greek_Salad</td>
+						<td class="info-price">$5.50</td>
+					</tr>
+					<tr class="item-description">
+						<td>.Pureed eggplant, garlic, green pepper and tomato dip.</td>
+					</tr>
+					<tr class="item-info">
+						<td class="info-name">Gusto_Salad</td>
+						<td class="info-price">$5.25</td>
+					</tr>
+					<tr class="item-description">
+						<td>Pureed eggplant, garlic, green pepper and tomato dip.</td>
+					</tr>
+				</table>
+			</div>
+			<div class="second-column">
+				<table class="table-starters">
+					<caption>Starters</caption>
+					<tr class="item-info">
+						<td class="info-name">Haloumi</td>
+						<td class="info-price">$3.99</td>
+					</tr>
+					<tr class="item-description">
+						<td>Refreshing traditional cucumber and garlic yoghurt dip.</td>
+					</tr>
+					<tr class="item-info">
+						<td class="info-name">Spinach_Pie</td>
+						<td class="info-price">$5.50</td>
+					</tr>
+					<tr class="item-description">
+						<td>.Pureed eggplant, garlic, green pepper and tomato dip.</td>
+					</tr>
+				</table>
+				<table class="table-dishes">
+					<caption>Main Dishes</caption>
+					<tr class="item-info">
+						<td class="info-name">Cornish_Mackerel</td>
+						<td class="info-price">$5.99</td>
+					</tr>
+					<tr class="item-description">
+						<td>Refreshing traditional cucumber and garlic yoghurt dip.</td>
+					</tr>
+					<tr class="item-info">
+						<td class="info-name">Roast_Lamb</td>
+						<td class="info-price">$5.50</td>
+					</tr>
+					<tr class="item-description">
+						<td>.Pureed eggplant, garlic, green pepper and tomato dip.</td>
+					</tr>
+					<tr class="item-info">
+						<td class="info-name">Fried_Chicken</td>
+						<td class="info-price">$5.25</td>
+					</tr>
+					<tr class="item-description">
+						<td>Pureed eggplant, garlic, green pepper and tomato dip.</td>
+					</tr>
+					<tr class="item-info">
+						<td class="info-name">Pastitsio</td>
+						<td class="info-price">$5.99</td>
+					</tr>
+					<tr class="item-description">
+						<td>Refreshing traditional cucumber and garlic yoghurt dip.</td>
+					</tr>
+				</table>
+			</div>	
 		</section>
 		<section class="review">
 			<div class="review-wrapper">
@@ -160,33 +168,36 @@
 			</div>
 		</section>
 		<section class="booking">
-			<h2 class="booking-title">Just the right food</h2>
+			
 			<div class="img-wrapper">
-				<img src="img/image4.jpg" alt="">
-				<img src="" alt="img/image5.jpg">
+				<img src="img/image4.jpg" width="270" height="507" alt="rice with meat">
+				<img src="img/image5.jpg" width="270" height="507" alt="desert">
 			</div>
-			<div class="booking-description">
-				<p>
-					If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food.
-				</p>
-				<p>
-					Delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out! Perfect materials and freshly baked food.
-				</p>
+			<div class="description-form-wrapper">
+				<h2 class="booking-title">Just the right food</h2>
+				<div class="booking-description">
+					<p>
+						If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food.
+					</p>
+					<p>
+						Delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out! Perfect materials and freshly baked food.
+					</p>
+				</div>
+				<form class="booking-form" action="post">
+					<label for="booking-form-name">Name</label>
+					<input type="text" id="booking-form-name">
+					<label for="booking-form-email">Mail</label>
+					<input type="email" id="booking-form-email">
+					<label for="booking-form-date">Date</label>
+					<input type="date" id="booking-form-date">
+					<label for="booking-form-number">Party Number</label>
+					<input type="number" id="booking-form-number" min="1" max="30" step="1">
+					<button class="form-button" type="submit">Book now!</button>
+				</form>
 			</div>
-			<form class="booking-form" action="post">
-				<label for="booking-form-name">Name</label>
-				<input type="text" id="booking-form-name">
-				<label for="booking-form-email">Mail</label>
-				<input type="email" id="booking-form-email">
-				<label for="booking-form-date">Date</label>
-				<input type="date" id="booking-form-date">
-				<label for="booking-form-number">Party Number</label>
-				<input type="number" id="booking-form-number" min="1" max="30" step="1">
-				<button class="form-button" type="submit">Book now!</button>
-			</form>
 		</section>
 	</main>
-	<footer class="main-footer">
+	<footer class="main-footer container">
 		<section class="about">
 			<h2 class="about-title">About Us</h2>
 			<p class="about-description">

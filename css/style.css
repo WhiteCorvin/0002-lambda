@@ -1,3 +1,12 @@
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+html {
+	box-sizing: border-box;
+}
+.content-box-component {
+	box-sizing: content-box;
+}
 body {
 	margin: 0;
 	padding: 0;
@@ -26,15 +35,38 @@ a {
 
 	border: none;
 }
+.visually-hidden {
+	display: none;
+}
+.container {
+	width: 1600px;	
+	margin: 0 auto;
+}
 .main-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	padding: 10px 175px 70px 175px;
+
 	background-color: #ccaf4d;
 	background-image: url("../img/bg-0.jpg");
 	background-size: 100%;
 	background-repeat: no-repeat;
 }
+.header-nav {
+	display: flex;
+
+	width: 1250px;
+}
 .header-menu-list,
 .header-social-list {
 	list-style: none;
+}
+.header-menu-list {
+	display: flex;
+
+	width: 770px;
 }
 .header-menu-item a {
 	font-family: "Gentium Book Basic", "Georgia", serif;
@@ -42,6 +74,11 @@ a {
 	font-weight: 700;
 	line-height: normal;
 	color: #ffffff;
+}
+.header-social-list {
+	display: flex;
+
+	width: 140px;
 }
 .header-social-item a {
 	background-image: url("../img/social.png");
@@ -56,6 +93,8 @@ a {
 	background-position: 20px 0;
 }
 .header-title {
+	width: 940px;
+
 	font-family: "YesevaOne", "Georgia", serif;
 	font-size: 90px;
 	font-weight: 400;
@@ -79,6 +118,10 @@ a {
 	text-align: center;
 }
 .preview {
+	display: flex;
+
+	padding: 50px 214px 30px 214px;
+
 	background-image: url("../img/pattern.png");
 	background-repeat: no-repeat;
 }
@@ -86,10 +129,15 @@ a {
 	text-align: center;
 }
 .promo-ingridients {
-	background-color: url("../img/bg.jpg");
+	padding: 100px 215px 100px 814px;
+
+	background-image: url("../img/bg.jpg");
 }
 .ingridients-wrapper {
-	background-color: rgba(0, 0, 0, 0.2);
+	width: 570px;
+	padding: 70px 65px 75px 70px;
+
+	background-color: rgba(0, 0, 0, 0.6);
 }
 .ingridients-wrapper .ingridients-title {
 	color: #ffffff;
@@ -97,8 +145,27 @@ a {
 .ingridients-description {
 	color: #ffffff;
 }
+.ingridients-img-list {
+	display: flex;
+	list-style: none;
+}
+.ingridients-img-item {
+	width: 115px;
+	height: 115px;
+}
 .menu-eat {
+	display: flex;
+	justify-content: space-between;
+
+	padding: 100px 215px 80px 215px;
+
 	background-image: url("../img/pattern2.png");
+}
+}
+.menu-eat table {
+	width: 570px;
+	margin: 0;
+	padding: 0;
 }
 .menu-eat caption {
 	font-family: "YesevaOne", "Georgia", serif;
@@ -128,9 +195,14 @@ a {
 	color: #4c4c4c;
 }
 .review {
+	padding: 100px 415px;
+
 	background-image: url("../img/bg-2.jpg");
 }
 .review-wrapper {
+	width: 770px;
+	padding: 75px 70px 90px 70px;
+
 	font-family: "YesevaOne", "Georgia", serif;
 	font-weight: 400;
 	line-height: normal;
@@ -153,11 +225,30 @@ a {
 	line-height: 45px;
 }
 .booking {
+	display: flex;
+
+	padding: 100px 215px 100px 215px;
+
 	background-image: url("../img/pattern.png");
 	background-repeat: no-repeat;
 }
+.img-wrapper {
+	display: flex;
+	justify-content: space-between;
+
+	width: 570px;
+}
 .booking-description {
 	text-align: center;
+}
+.description-form-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	width: 570px;
+	padding-left: 70px;
+	padding-right: 70px;
 }
 .booking-form label{
 	font-family: "Open Sans", "Arial", sans-serif;
@@ -185,6 +276,10 @@ a {
 	background-color: #c9a131;
 }
 .main-footer {
+	display: flex;
+
+	padding: 50px 214px;
+
 	background-color: #191919;
 }
 .main-footer h2 {
@@ -195,12 +290,18 @@ a {
 	color: #ffffff;
 	text-align: center;
 }
+.about {
+	width: 370px;
+}
 .card-list,
 .footer-social-list {
 	list-style: none;
 }
 .about-description span {
 	font-weight: bold;
+}
+.time {
+	width: 230px;
 }
 .time-month {
 	font-weight: bold;
@@ -222,6 +323,9 @@ a {
 }
 .card-item a:last-child {
 	background-position: 40px 0;
+}
+.location {
+	width: 230px;
 }
 .location address {
 	font-weight: 700;
