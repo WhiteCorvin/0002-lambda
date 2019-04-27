@@ -22,7 +22,13 @@ body {
 a {
 	text-decoration: none;
 }
+img {
+	max-width: 100%;
+	height: auto;
+}
 .button {
+	padding: 15px 50px;
+
 	font-family: "Lato", "Arial", sans-serif;
 	font-size: 18px;
 	font-weight: 400;
@@ -35,8 +41,23 @@ a {
 
 	border: none;
 }
-.visually-hidden {
-	display: none;
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden, 
+input[type="radio"].visually-hidden {
+	position: absolute;
+
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+
+	white-space: nowrap;
+
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+	
 }
 .container {
 	width: 1600px;	
@@ -47,7 +68,7 @@ a {
 	flex-direction: column;
 	align-items: center;
 
-	padding: 10px 175px 70px 175px;
+	padding: 0 175px 0 175px;
 
 	background-color: #ccaf4d;
 	background-image: url("../img/bg-0.jpg");
@@ -58,42 +79,79 @@ a {
 	display: flex;
 
 	width: 1250px;
+	margin-bottom: 115px;
+}
+.header-logo {
+	margin-right: 220px;
+	padding-top: 10px;
 }
 .header-menu-list,
 .header-social-list {
+	margin: 0;
+	padding: 0;
+
 	list-style: none;
 }
 .header-menu-list {
 	display: flex;
+	flex-wrap: wrap;
 
 	width: 770px;
 }
-.header-menu-item a {
+.menu-item {
+	display: flex;
+	margin-right: 28px;
+}
+.menu-item:last-child {
+	margin: 0;
+}
+.menu-item a {
+	padding: 40px 10px 30px 10px;
+	
 	font-family: "Gentium Book Basic", "Georgia", serif;
 	font-size: 21px;
 	font-weight: 700;
 	line-height: normal;
 	color: #ffffff;
 }
+.menu-item .active {
+	padding-top: 35px;
+	border-top: 5px solid #a39e8e;
+}
 .header-social-list {
 	display: flex;
-
+	
+	padding: 40px 30px 35px 0;
 	width: 140px;
 }
+.header-social-item {
+	margin-right: 15px; 
+}
+.header-social-item:nth-child(2) {
+	margin-right: 10px;
+}
 .header-social-item a {
+	display: block;
+	width: 20px;
+	height: 20px;
 	background-image: url("../img/social.png");
 }
-.header-social-item a:first-child {
+.header-social-item:first-child a {
 	background-position: 0 0;
 }
-.header-social-item a:nth-child(2) {
-	background-position: 10px 0;
+.header-social-item:nth-child(2) a {
+	background-position: 45px 0;
 }
-.header-social-item a:last-child {
+.header-social-item:last-child a {
 	background-position: 20px 0;
 }
 .header-title {
+	position: relative;
+
 	width: 940px;
+	margin: 0;
+	margin-bottom: 25px;
+	padding-bottom: 75px;
 
 	font-family: "YesevaOne", "Georgia", serif;
 	font-size: 90px;
@@ -102,11 +160,29 @@ a {
 	color: #ffffff;
 	text-align: center;
 }
+.header-title::before {
+	content: "";
+	position: absolute;
+	bottom: 5px;
+	left: 50%;
+	margin-left: -116px;
+
+	width: 232px;
+	height: 43px;
+	background-image: url(../img/divider.png);
+}
+.wrapper-button {
+	margin-bottom: 142px;
+}
 .button-table {
-	background-color: rgba(0, 0, 0, 0.2);
+	margin-right: 30px;
+
+	background-color: rgba(0, 0, 0, 0.6);
+	border: 1px solid #000000;
 }
 .button-menu {
-	background-color: rgba(255, 255, 255, 0.2);
+	background-color: rgba(255, 255, 255, 0.4);
+	border: 1px solid #ffffff;
 }
 .index-main h2 {
 	font-family: "YesevaOne", "Georgia", serif;
@@ -120,13 +196,50 @@ a {
 .preview {
 	display: flex;
 
-	padding: 50px 214px 30px 214px;
+	padding: 50px 214px 0 214px;
 
 	background-image: url("../img/pattern.png");
 	background-repeat: no-repeat;
 }
+.preview-wrapper {
+	width: 430px;
+}
+.preview-title {
+	position: relative;
+	margin: 0;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	padding-bottom: 45px;
+}
+.preview-title::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	margin-left: -123px;
+	bottom: 5px;
+
+	width: 247px;
+	height: 24px;
+	background-image: url("../img/divider-gold.png");
+}
 .preview-description {
+	position: relative;
+	margin: 0;
+	margin-bottom: 100px;
+	padding-bottom: 280px;
+
 	text-align: center;
+}
+.preview-description::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	margin-left: -75px;
+	bottom: 0px;
+
+	width: 219px;
+	height: 221px;
+	background-image: url("../img/cook.png");
 }
 .promo-ingridients {
 	padding: 100px 215px 100px 814px;
@@ -140,18 +253,64 @@ a {
 	background-color: rgba(0, 0, 0, 0.6);
 }
 .ingridients-wrapper .ingridients-title {
+	position: relative;
+
+	margin: 0;
+	margin-bottom: 15px;
+	padding-bottom: 50px;
+
 	color: #ffffff;
 }
+.ingridients-title::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	margin-left: -123px;
+	bottom: 5px;
+
+	width: 247px;
+	height: 24px;
+	background-image: url(../img/divider-white.png);
+}
 .ingridients-description {
+	margin: 0;
+	margin-bottom: 60px;
+	
+	text-align: center;
 	color: #ffffff;
 }
 .ingridients-img-list {
 	display: flex;
+	justify-content: space-between;
+
+	margin: 0;
+	padding: 0;
+
 	list-style: none;
 }
 .ingridients-img-item {
 	width: 115px;
 	height: 115px;
+
+	border-radius: 50%;
+	box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.2);
+}
+.ingridients-img-item:first-child {
+	background-image: url("../img/image-3.jpg");
+	background-size: 380%;
+	background-position: -40px -30px;
+}
+.ingridients-img-item:nth-child(2) {
+	background-image: url("../img/image-2.jpg");
+	background-size: 200%;
+	background-position: -40px -30px;
+}
+.ingridients-img-item:last-child {
+	margin-right: 0;
+
+	background-image: url("../img/image.jpg");
+	background-size: 200%;
+	background-position: -40px -30px;
 }
 .menu-eat {
 	display: flex;
@@ -166,8 +325,14 @@ a {
 	width: 570px;
 	margin: 0;
 	padding: 0;
+
+	border-collapse: collapse;
 }
 .menu-eat caption {
+	position: relative;
+
+	padding-bottom: 50px;
+
 	font-family: "YesevaOne", "Georgia", serif;
 	font-size: 36px;
 	font-weight: 400;
@@ -175,12 +340,27 @@ a {
 	color: #cc9900;
 	text-align: center;
 }
+.menu-eat caption::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	margin-left: -123px;
+	bottom: 5px;
+
+	width: 247px;
+	height: 24px;
+	background-image: url("../img/divider-gold.png");
+}
 .info-name {
+	padding: 10px 0;
+
 	font-family: "YesevaOne", "Georgia", serif;
 	font-size: 21px;
 	font-weight: 400;
 	line-height: 24px;
 	color: #c89f2d;
+
+	border-bottom: 1px solid #e1d7b0;
 }
 .info-price {
 	font-family: "YesevaOne", "Georgia", serif;
@@ -188,8 +368,12 @@ a {
 	font-weight: 400;
 	line-height: 24px;
 	color: #c89f2d;
+
+	border-bottom: 1px solid #e1d7b0;
 }
-.item-description {
+.item-description td {
+	padding: 10px 0 25px 0;
+
 	font-size: 16px;
 	line-height: 24px;
 	color: #4c4c4c;
@@ -209,14 +393,33 @@ a {
 	color: #ffffff;
 	text-align: center;
 
-	background-color: rgba(0, 0, 0, 0.2);
+	background-color: rgba(0, 0, 0, 0.8);
 }
-.reviews-title {
+.review .reviews-title {
+	margin: 0;
+	padding-bottom: 60px;
+
+	color: #ffffff;
 	font-size: 36px;
+	font-weight: 700;
 }
 .reviews-description {
+	position: relative;
+	margin: 0;
+
 	font-size: 25px;
 	line-height: 45px;
+}
+.reviews-description::before {
+	content: "“";
+	position: absolute;
+	left: -30px;
+	top: 15px;
+
+	font-family: "Georgia", serif;
+	font-size: 96px;
+	font-weight: 400;
+	color: #f2f4f4;
 }
 .reviews-copyright {
 	font-family: "Lato", "Arial", sans-serif;
@@ -244,11 +447,50 @@ a {
 .description-form-wrapper {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	align-content: center;
 
 	width: 570px;
 	padding-left: 70px;
 	padding-right: 70px;
+}
+.booking-title {
+	position: relative;
+
+	margin: 0;
+	margin-top: 5px;
+	margin-bottom: 20px;
+	padding-bottom: 40px;
+}
+.booking-title::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	margin-left: -123px;
+	bottom: 0px;
+
+	width: 247px;
+	height: 24px;
+	background-image: url("../img/divider-gold.png");
+}
+.booking-description {
+	margin-bottom: 25px;
+}
+.booking-description p {
+	margin: 0;
+}
+.booking-description p:first-child {
+	margin-bottom: 10px;
+}
+.booking-form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.booking-form p {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	margin-bottom: 25px;
 }
 .booking-form label{
 	font-family: "Open Sans", "Arial", sans-serif;
@@ -256,6 +498,16 @@ a {
 	font-weight: 700;
 	line-height: normal;
 	color: #c9a131;
+}
+.booking-form input {
+	width: 200px;
+	padding: 7px 12px 10px 12px;
+	border: 1px solid #c8c6c6;
+}
+.booking-form input:hover,
+.booking-form input:focus,
+.booking-form input:active {
+	border: 1px solid #c89f2d;
 }
 .booking-form input::placeholder {
 	font-family: "Open Sans", "Arial", sans-serif;
@@ -266,6 +518,9 @@ a {
 	color: #7c7c7c;
 }
 .form-button {
+	margin: 0 auto;
+	padding: 10px 60px 10px 60px;
+
 	font-family: "Open Sans", "Arial", sans-serif;
 	font-size: 16px;
 	font-weight: 400;
@@ -274,6 +529,7 @@ a {
 	text-align: center;
 
 	background-color: #c9a131;
+	border: none;
 }
 .main-footer {
 	display: flex;
@@ -281,8 +537,14 @@ a {
 	padding: 50px 214px;
 
 	background-color: #191919;
+	color: #ffffff;
 }
 .main-footer h2 {
+	position: relative;
+	margin: 0;
+	margin-bottom: 15px;
+	padding-bottom: 50px;
+
 	font-family: "YesevaOne", "Georgia", serif;
 	font-size: 21px;
 	font-weight: 400;
@@ -290,8 +552,26 @@ a {
 	color: #ffffff;
 	text-align: center;
 }
+.main-footer h2::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	margin-left: -123px;
+	bottom: 0;
+
+	width: 247px;
+	height: 24px;
+	background-image: url(../img/divider-white.png);
+}
+.main-footer section {
+	text-align: center;
+}
 .about {
-	width: 370px;
+	width: 365px;
+	margin-right: 100px;
+}
+.about p {
+	margin: 0;
 }
 .card-list,
 .footer-social-list {
@@ -302,46 +582,85 @@ a {
 }
 .time {
 	width: 230px;
+	margin-right: 170px;
+}
+.time p {
+	margin: 0;
 }
 .time-month {
 	font-weight: bold;
 }
-.card-item a {
-	background-image: url("../img/cards.png");
+.card-list {
+	display: flex;
+	flex-wrap: wrap;
+	width: 121px;
+	margin: 0 auto;
+	margin-top: 30px;
+	padding: 0;
 }
-.card-item a:first-child {
+.card-item {
+	margin-right: 7px;
+}
+.card-item:last-child {
+	margin-right: 0;
+}
+.card-item a {
+	display: block;
+	width: 25px;
+	height: 17px;
+
+	background-image: url("../img/cards.png");
+	background-repeat: no-repeat;
+}
+.card-item:first-child a {
 	background-position: 0 0;
 }
-.card-item a:nth-child(2) {
-	background-position: 10px 0;
+.card-item:nth-child(2) a {
+	background-position: -32px 0;
 }
-.card-item a:nth-child(3) {
-	background-position: 20px 0;
+.card-item:nth-child(3) a {
+	background-position: -64px 0;
 }
-.card-item a:nth-child(4) {
-	background-position: 30px 0;
-}
-.card-item a:last-child {
-	background-position: 40px 0;
+.card-item:last-child a {
+	background-position: -96px 0;
 }
 .location {
 	width: 230px;
 }
 .location address {
+	margin-bottom: 50px;
+
 	font-weight: 700;
 }
+.footer-social-list {
+	display: flex;
+	flex-wrap: wrap;
+	width: 92px;
+	margin: 0 auto;
+	padding: 0;
+}
+.footer-social-item {
+	margin-right: 9px;
+}
+.footer-social-item:last-child {
+	margin-right: 0;
+}
 .footer-social-item a {
+	display: block;
+	width: 16px;
+	height: 16px;
+
 	background-image: url("../img/icons.png");
 }
-.footer-social-item a:first-child {
+.footer-social-item:first-child a {
 	background-position: 0 0;
 }
-.footer-social-item a:nth-child(2) {
-	background-position: 10px 0;
+.footer-social-item:nth-child(2) a {
+	background-position: -24px 0;
 }
-.footer-social-item a:nth-child(3) {
-	background-position: 20px 0;
+.footer-social-item:nth-child(3) a {
+	background-position: -48px 0;
 }
-.footer-social-item a:last-child {
-	background-position: 30px 0;
+.footer-social-item:last-child a {
+	background-position: -72px 0;
 }

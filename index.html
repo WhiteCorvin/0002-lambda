@@ -12,7 +12,7 @@
 		<nav class="header-nav">
 			<a class="header-logo"><img src="img/logo.png" width="156" height="92" alt="Lambda-logo"></a><!--Наложить шум на лого-->
 			<ul class="header-menu-list">
-				<li class="menu-item"><a href="#">Home</a></li>
+				<li class="menu-item"><a href="#" class="active">Home</a></li>
 				<li class="menu-item"><a href="#">About</a></li>
 				<li class="menu-item"><a href="#">Igredients</a></li>
 				<li class="menu-item"><a href="#">Menu</a></li>
@@ -20,9 +20,9 @@
 				<li class="menu-item"><a href="#">Reservations</a></li>
 			</ul>
 			<ul class="header-social-list">
-				<li class="header-social-item"><a href="#">Twitter</a></li>
-				<li class="header-social-item"><a href="#">YouTube</a></li>
-				<li class="header-social-item"><a href="#">Facebook</a></li>
+				<li class="header-social-item"><a href="#"><span class="visually-hidden">Twitter</span></a></li>
+				<li class="header-social-item"><a href="#"><span class="visually-hidden">YouTube</span></a></li>
+				<li class="header-social-item"><a href="#"><span class="visually-hidden">Facebook</span></a></li>
 			</ul>
 		</nav>
 		<h2 class="header-title">the right ingredients for the right food</h2>
@@ -49,9 +49,9 @@
 				If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!
 			</p>
 			<ul class="ingridients-img-list">
-				<li class="ingridients-img-item"><img src="img/image-3.jpg" alt=""></li>
-				<li class="ingridients-img-item"><img src="img/image-2.jpg" alt=""></li>
-				<li class="ingridients-img-item"><img src="img/image.jpg" alt=""></li>
+				<li class="ingridients-img-item"></li>
+				<li class="ingridients-img-item"></li>
+				<li class="ingridients-img-item"></li>
 			</ul>
 			</div>
 		</section>
@@ -168,7 +168,6 @@
 			</div>
 		</section>
 		<section class="booking">
-			
 			<div class="img-wrapper">
 				<img src="img/image4.jpg" width="270" height="507" alt="rice with meat">
 				<img src="img/image5.jpg" width="270" height="507" alt="desert">
@@ -184,14 +183,23 @@
 					</p>
 				</div>
 				<form class="booking-form" action="post">
-					<label for="booking-form-name">Name</label>
-					<input type="text" id="booking-form-name">
-					<label for="booking-form-email">Mail</label>
-					<input type="email" id="booking-form-email">
-					<label for="booking-form-date">Date</label>
-					<input type="date" id="booking-form-date">
-					<label for="booking-form-number">Party Number</label>
-					<input type="number" id="booking-form-number" min="1" max="30" step="1">
+					<p>
+						<label for="booking-form-name">Name</label>
+						<input type="text" id="booking-form-name" placeholder="your name *">
+					</p>
+					<p>
+						<label for="booking-form-email">Mail</label>
+						<input type="email" id="booking-form-email" placeholder="your email *">
+					</p>
+					<p>
+						<!--Добавить выбор даты через JS-->
+						<label for="booking-form-date">Date</label>
+						<input type="date" id="booking-form-date" placeholder="date *">
+					</p>
+					<p>
+						<label for="booking-form-number">Party Number</label>
+						<input type="number" id="booking-form-number" min="1" max="30" step="1" placeholder="party number">
+					</p>
 					<button class="form-button" type="submit">Book now!</button>
 				</form>
 			</div>
@@ -222,10 +230,10 @@
 				128 Meserole Avenue
 			</address>
 			<ul class="footer-social-list">
-				<li class="footer-social-item"><a href="#">Facebook</a></li>
-				<li class="footer-social-item"><a href="#">Youtube</a></li>
-				<li class="footer-social-item"><a href="#">Twitter</a></li>
-				<li class="footer-social-item"><a href="#">Window</a></li>
+				<li class="footer-social-item"><a href="#"><span class="visually-hidden">Facebook</span></a></li>
+				<li class="footer-social-item"><a href="#"><span class="visually-hidden">Youtube</span></a></li>
+				<li class="footer-social-item"><a href="#"><span class="visually-hidden">Twitter</span></a></li>
+				<li class="footer-social-item"><a href="#"><span class="visually-hidden">Window</span></a></li>
 			</ul>
 		</section>
 	</footer>
